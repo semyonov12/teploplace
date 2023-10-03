@@ -877,7 +877,7 @@ main {
 
   .slide-main__telegram {
     font-size: 16px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     margin-right: 10px;
   }
 
@@ -888,9 +888,9 @@ main {
 
   .slide-main__phone {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 45px;
-            flex: 0 0 45px;
-    height: 45px;
+        -ms-flex: 0 0 55px;
+            flex: 0 0 55px;
+    height: 55px;
   }
 
   .slide-main__phone img {

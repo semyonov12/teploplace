@@ -41,7 +41,7 @@ if (isMobile.any()) document.documentElement.classList.add('touch');
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-
+			autoplayDisableOnInteraction: true,
 			navigation: {
 				prevEl: '.main__button-prev',
 				nextEl: '.main__button-next',
