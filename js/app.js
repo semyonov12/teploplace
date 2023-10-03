@@ -1,8 +1,26 @@
-window.addEventListener('resize', () => {
-	// We execute the same script as before
-	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+	/* Проверка мобильного браузера */
+	let isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
+
+	// Добавление класса _touch для HTML если браузер мобильный
+	if (isMobile.any()) document.documentElement.classList.add('touch');
+	
+
+// Учет плавающей панели на мобильных устройствах при 100vh
+function fullVHfix() {
+	const fullScreens = document.querySelectorAll('.main__slide');
+	if (fullScreens.length && isMobile.any()) {
+		window.addEventListener('resize', fixHeight);
+		function fixHeight() {
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		}
+		fixHeight();
+	}
+}
+
+fullVHfix();
+
+
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -20,11 +38,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		document.documentElement.classList.add(className);
 	});
 
-	/* Проверка мобильного браузера */
-let isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
-
-// Добавление класса _touch для HTML если браузер мобильный
-if (isMobile.any()) document.documentElement.classList.add('touch');
 
 
 
