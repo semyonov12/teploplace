@@ -1,3 +1,9 @@
+window.addEventListener('resize', () => {
+	// We execute the same script as before
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 document.addEventListener("DOMContentLoaded", function (event) {
 
 	/* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
@@ -20,11 +26,7 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 // Добавление класса _touch для HTML если браузер мобильный
 if (isMobile.any()) document.documentElement.classList.add('touch');
 
-	window.addEventListener('resize', () => {
-		// We execute the same script as before
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	});
+
 
 
 	if (document.querySelector('.main__slider')) {
