@@ -20,8 +20,6 @@ function fullVHfix() {
 
 fullVHfix();
 
-
-
 document.addEventListener("DOMContentLoaded", function (event) {
 
 	/* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
@@ -37,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		let className = support === true ? 'webp' : 'no-webp';
 		document.documentElement.classList.add(className);
 	});
-
-
 
 
 
@@ -64,10 +60,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 20,
+					spaceBetween: 0,
 				},
 				768: {
 					slidesPerView: 1.5,
+					spaceBetween: 10,
+				},
+				1200: {
+					slidesPerView: 2,
 					spaceBetween: 20,
 				},
 				1440: {
@@ -87,10 +87,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					progressContent[slideAct].style.width = 'calc(100% * var(--progress))';
 
 				},
-				slideChange: function () {
-					let slideAct = this.activeIndex == 1 ? this.activeIndex - 1 : this.activeIndex;
+				// slideChange: function () {
+				// 	let slideAct = this.activeIndex == 1 ? this.activeIndex - 1 : this.activeIndex;
+				// 	progressContent[slideAct].style.width = '100%';
+
+					
+				// },
+
+				slideNextTransitionStart: function () {
+					let slideAct = this.activeIndex - 1;
 					progressContent[slideAct].style.width = '100%';
-				},
+				  },
+				  
+				 slidePrevTransitionStart: function () {
+					let slideAct = this.activeIndex + 1;
+					progressContent[slideAct].style.width = '0%';
+				  },
 
 			}
 
