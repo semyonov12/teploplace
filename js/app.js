@@ -1,9 +1,9 @@
-	/* Проверка мобильного браузера */
-	let isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
+/* Проверка мобильного браузера */
+let isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
 
-	// Добавление класса _touch для HTML если браузер мобильный
-	if (isMobile.any()) document.documentElement.classList.add('touch');
-	
+// Добавление класса _touch для HTML если браузер мобильный
+if (isMobile.any()) document.documentElement.classList.add('touch');
+
 
 // Учет плавающей панели на мобильных устройствах при 100vh
 function fullVHfix() {
@@ -37,20 +37,56 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	});
 
 
+	const copyButton = document.getElementById('copy-button');
+	const textToCopy = document.getElementById('text-to-copy');
+
+	const textUp = document.querySelector('.slide-main__copy-text');
+
+	if (copyButton) {
+		copyButton.addEventListener('click', function () {
+			const text = textToCopy.innerText;
+			navigator.clipboard.writeText(text).then(function () {
+				textUp.classList.add('slide-main__copy-text_act');
+				setTimeout(() => {
+					textUp.classList.remove('slide-main__copy-text_act');
+				}, 1000);
+			}, function () {
+				console.error('Не удалось скопировать текст');
+			});
+		});
+	}
+
+
+
+
 
 	if (document.querySelector('.main__slider')) {
 		const progressContent = document.querySelectorAll(".boxes-autoplay-progress span");
+		const slideVideo1 = document.querySelector('.slide-video');
+		const slideVideo2 = document.querySelector('.slide-video-2');
 		// Создаем слайдер
 		let mySwip = new Swiper('.main__slider', {
 			observer: true,
 			observeParents: true,
-			slidesPerView: 2.5,
+			slidesPerView: 3,
 			spaceBetween: 20,
 			loop: false,
 			centeredSlides: true,
 			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
+				delay: 3000, // общее время автопрокрутки для всех слайдов
+				disableOnInteraction: false, // автопрокрутка не останавливается при взаимодействии пользователя
+				waitForTransition: true, // автопрокрутка ждет окончания перехода между слайдами
+				speed: 1000, // скорость перехода между слайдами
+				// функция, которая возвращает время автопрокрутки для каждого слайда
+				// slideIndex - индекс текущего слайда (начинается с 0)
+				// slide - элемент текущего слайда (HTMLElement)
+				calculateDelay: function (slideIndex, slide) {
+					if (slideIndex === 2 || slideIndex === 4) {
+						return 15000; // время автопрокрутки для 3 и 5 слайда - 15 секунд
+					} else {
+						return 2000; // время автопрокрутки для остальных слайдов - 2 секунды
+					}
+				}
 			},
 			autoplayDisableOnInteraction: true,
 			navigation: {
@@ -66,12 +102,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					slidesPerView: 1.5,
 					spaceBetween: 10,
 				},
-				1200: {
+				1201: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				1440: {
+
+				1442: {
 					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+				1701: {
+					slidesPerView: 3,
 					spaceBetween: 20,
 				},
 			},
@@ -87,22 +128,67 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					progressContent[slideAct].style.width = 'calc(100% * var(--progress))';
 
 				},
-				// slideChange: function () {
-				// 	let slideAct = this.activeIndex == 1 ? this.activeIndex - 1 : this.activeIndex;
-				// 	progressContent[slideAct].style.width = '100%';
 
-					
-				// },
+				slideChange: function () {
+					if (this.activeIndex === 3) {
+					  this.params.autoplay.delay = 14600;
+					  this.autoplay.start(); //
+					} else if(this.activeIndex === 6) {
+						this.params.autoplay.delay = 11500; 
+						this.autoplay.start(); 
+					}
+					else {
+					  this.params.autoplay.delay = 3000; 
+					  this.autoplay.start();
+					}
+				  },
+
 
 				slideNextTransitionStart: function () {
+					
+
+					if (slideVideo2.classList.contains("swiper-slide-active")) {
+						slideVideo2.querySelector('video').play();
+						console.log(slideVideo2.querySelector('video').duration * 1000);
+					}
+					else {
+						slideVideo2.querySelector('video').pause();
+						slideVideo2.querySelector('video').currentTime = 0;
+					}
+
+					if (slideVideo1.classList.contains("swiper-slide-active")) {
+						slideVideo1.querySelector('video').play();
+					}
+					else {
+						slideVideo1.querySelector('video').pause();
+						slideVideo1.querySelector('video').currentTime = 0;
+					}
+
 					let slideAct = this.activeIndex - 1;
 					progressContent[slideAct].style.width = '100%';
-				  },
-				  
-				 slidePrevTransitionStart: function () {
+				},
+
+				slidePrevTransitionStart: function () {
+
+					if (slideVideo2.classList.contains("swiper-slide-active")) {
+						slideVideo2.querySelector('video').play();
+					}
+					else {
+						slideVideo2.querySelector('video').pause();
+						slideVideo2.querySelector('video').currentTime = 0;
+					}
+
+					if (slideVideo1.classList.contains("swiper-slide-active")) {
+						slideVideo1.querySelector('video').play();
+					}
+					else {
+						slideVideo1.querySelector('video').pause();
+						slideVideo1.querySelector('video').currentTime = 0;
+					}
+
 					let slideAct = this.activeIndex + 1;
 					progressContent[slideAct].style.width = '0%';
-				  },
+				},
 
 			}
 

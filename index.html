@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20231004205455">
-	<link rel="stylesheet" href="css/style.min.css?_v=20231004205455">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20231008203215">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231008203215">
 	<title>Главная</title>
 	
 </head>
@@ -28,7 +28,7 @@
 				<div class="main__slider swiper">
 
 					<div class="main__wrapper swiper-wrapper">
-						<div class="main__slide swiper-slide slide-main">
+						 <div class="main__slide swiper-slide slide-main">
 							<div class="slide-main__logo">
 								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="логотип teploplace"></picture>
 							</div>
@@ -179,7 +179,10 @@
 							</div>
 						</div>
 						<div class="main__slide swiper-slide slide-video">
-
+							<video preload="auto" loop>
+								<source type="video/webp" src="video/1.webm">
+								<source type="video/mp4" src="video/1.mp4">
+							</video>
 						</div>
 						<div class="main__slide swiper-slide slide-reviews">
 							<div class="slide-reviews__top">
@@ -478,8 +481,191 @@
 								<span>Мы на Яндекс.Картах</span>
 							</a>
 						</div>
-						<div class="main__slide swiper-slide slide-video">
-
+						 <div class="main__slide swiper-slide slide-sale">
+							<div class="slide-sale__logo">
+								<picture><source srcset="img/logo-black.webp" type="image/webp"><img src="img/logo-black.png" alt=""></picture>
+							</div>
+							<div class="slide-sale__title">Получи скидку в Telegram-боте на первое посещение.</div>
+							<div class="slide-sale__wrap">
+								<div class="slide-sale__sub-title">Промокод 50% на последнем слайде</div>
+								<div class="slide-sale__row">
+									<div class="slide-sale__label">Бонусы</div>
+									<div class="slide-sale__label slide-sale__label_act">Скидки</div>
+									<div class="slide-sale__label">Акции</div>
+								</div>
+							</div>
+							<div class="slide-sale__bottom">
+								<div class="slide-sale__body">
+									<div class="slide-sale__column">
+										<div class="slide-sale__head">Забронировать столик</div>
+										<div class="slide-sale__text">Марьина 
+											Роща </div>
+										<div class="slide-sale__value">Сегодня, 19:00</div>
+									</div>
+									<div class="slide-sale__column">
+										<div class="slide-sale__image">
+											<picture><source srcset="img/sale1.webp" type="image/webp"><img src="img/sale1.jpg" alt=""></picture>
+										</div>
+										<div class="slide-sale__value">2-4 человека</div>
+									</div>
+								</div>
+								<a href="" class="slide-sale__link">
+									<svg xmlns="http://www.w3.org/2000/svg" width="57" height="48" viewBox="0 0 57 48" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.91845 20.6637C19.2192 13.8898 29.4222 9.42401 34.5272 7.26636C49.1032 1.10586 52.132 0.0357136 54.1061 0.00037677C54.5402 -0.00739518 55.5111 0.101946 56.1399 0.620448C56.6709 1.05826 56.817 1.64969 56.8869 2.06478C56.9568 2.47988 57.0439 3.42548 56.9747 4.16434C56.1848 12.5976 52.767 33.0629 51.0282 42.5083C50.2925 46.505 48.8438 47.8451 47.4413 47.9762C44.3933 48.2612 42.0788 45.9294 39.1267 43.963C34.5072 40.886 31.8975 38.9706 27.4135 35.968C22.2315 32.498 25.5908 30.5908 28.544 27.474C29.3169 26.6583 42.7463 14.246 43.0063 13.12C43.0388 12.9792 43.0689 12.4543 42.762 12.1771C42.4552 11.8999 42.0022 11.9947 41.6753 12.0701C41.212 12.177 33.8324 17.1334 19.5364 26.9393C17.4417 28.4009 15.5444 29.1131 13.8444 29.0757C11.9704 29.0346 8.36554 27.999 5.68568 27.1139C2.39873 26.0282 -0.213673 25.4541 0.0138088 23.6103C0.132295 22.6499 1.43384 21.6677 3.91845 20.6637Z" fill="url(#paint0_linear_68_15347)"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.91845 20.6637C19.2192 13.8898 29.4222 9.42401 34.5272 7.26636C49.1032 1.10586 52.132 0.0357136 54.1061 0.00037677C54.5402 -0.00739518 55.5111 0.101946 56.1399 0.620448C56.6709 1.05826 56.817 1.64969 56.8869 2.06478C56.9568 2.47988 57.0439 3.42548 56.9747 4.16434C56.1848 12.5976 52.767 33.0629 51.0282 42.5083C50.2925 46.505 48.8438 47.8451 47.4413 47.9762C44.3933 48.2612 42.0788 45.9294 39.1267 43.963C34.5072 40.886 31.8975 38.9706 27.4135 35.968C22.2315 32.498 25.5908 30.5908 28.544 27.474C29.3169 26.6583 42.7463 14.246 43.0063 13.12C43.0388 12.9792 43.0689 12.4543 42.762 12.1771C42.4552 11.8999 42.0022 11.9947 41.6753 12.0701C41.212 12.177 33.8324 17.1334 19.5364 26.9393C17.4417 28.4009 15.5444 29.1131 13.8444 29.0757C11.9704 29.0346 8.36554 27.999 5.68568 27.1139C2.39873 26.0282 -0.213673 25.4541 0.0138088 23.6103C0.132295 22.6499 1.43384 21.6677 3.91845 20.6637Z" fill="white"/>
+										<defs>
+										  <linearGradient id="paint0_linear_68_15347" x1="56.0552" y1="0.320002" x2="24.4434" y2="34.1623" gradientUnits="userSpaceOnUse">
+											
+										  </linearGradient>
+										</defs>
+									  </svg>
+									  <svg xmlns="http://www.w3.org/2000/svg" width="158" height="38" viewBox="0 0 158 38" fill="none">
+										<path d="M156.768 20.7678C157.744 19.7914 157.744 18.2085 156.768 17.2322L140.858 1.32232C139.882 0.346008 138.299 0.346008 137.322 1.32232C136.346 2.29863 136.346 3.88154 137.322 4.85785L151.464 19L137.322 33.1421C136.346 34.1184 136.346 35.7013 137.322 36.6777C138.299 37.654 139.882 37.654 140.858 36.6777L156.768 20.7678ZM2.18557e-07 21.5L155 21.5L155 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z" fill="white"/>
+									  </svg>
+									  <span>Забронировать через TG</span>
+								</a>
+							</div>
+							<div class="slide-sale__decor">
+								<picture><source srcset="img/slide-2.webp" type="image/webp"><img src="img/slide-2.jpg" alt="комната"></picture>
+							</div>
+						</div> 
+						<div class="main__slide swiper-slide slide-video-2">
+							<video preload="auto" loop>
+								<source type="video/webp" src="video/2.webm">
+								<source type="video/mp4" src="video/2.mp4">
+							</video>
+						</div>
+						 <div class="main__slide swiper-slide slide-skittles">
+							<div class="slide-skittles__logo">
+								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
+							</div>
+							<div class="slide-skittles__block">
+								<div class="slide-skittles__sub-title">Наташ, бронируй стол, у нас</div>
+								<div class="slide-skittles__title">
+									<picture><source srcset="img/SKITTLES2.0.webp" type="image/webp"><img src="img/SKITTLES2.0.png" alt="SKITTLES"></picture>
+								</div>
+								<div class="slide-skittles__text">
+									<p>Новая версия нашего</p>
+									<p>легендарного микса</p>
+								</div>
+							</div>
+							<div class="slide-skittles__items">
+								<div class="slide-skittles__item"><span>Darkсайд</span> - Redberry</div>
+								<div class="slide-skittles__item"><span>Deус</span> - Candies</div>
+								<div class="slide-skittles__item"><span>С#КР#ТНЫЙ</span> #НГР#Д#ЕНТ</div>
+								<div class="slide-skittles__item"><span>БлэкBurn</span> - LemonShock</div>
+							</div>
+							<div class="slide-skittles__image-1">
+								<picture><source srcset="img/cat1.webp" type="image/webp"><img src="img/cat1.png" alt="кот"></picture>
+							</div>
+							<div class="slide-skittles__image-2">
+								<picture><source srcset="img/cat2.webp" type="image/webp"><img src="img/cat2.png" alt="кот"></picture>
+							</div>
+							<div class="slide-skittles__image-3">
+								<picture><source srcset="img/cat3.webp" type="image/webp"><img src="img/cat3.png" alt="кот"></picture>
+							</div>
+							<div class="slide-skittles__decor-1">
+								<img src="img/skittles1.svg" alt="">
+							</div>
+							<div class="slide-skittles__decor-2">
+								<img src="img/skittles2.svg" alt="">
+							</div>
+							<div class="slide-skittles__decor-3">
+								<img src="img/skittles3.svg" alt="">
+							</div>
+							<div class="slide-skittles__decor-4">
+								<img src="img/skittles4.svg" alt="">
+							</div>
+							<div class="slide-skittles__decor-5">
+								<img src="img/skittles5.svg" alt="">
+							</div>
+						</div>
+						 <div class="main__slide swiper-slide slide-menu">
+							<div class="slide-menu__logo">
+								<picture><source srcset="img/logo-black.webp" type="image/webp"><img src="img/logo-black.png" alt=""></picture>
+							</div>
+							<div class="slide-menu__icon">
+								<img src="img/slide-menu5.svg" alt="">
+							</div>
+							<div class="slide-menu__title">
+								МЕНЮ КРАФТОВЫХ ВКУСНЯШЕК
+							</div>
+							<div class="slide-menu__block">
+								<ul class="slide-menu__list">
+									<li class="slide-menu__item">Уникальные лимонады</li>
+									<li class="slide-menu__item">Крафтовые закуски </li>
+									<li class="slide-menu__item">Авторские напитки (ал.)</li>
+									<li class="slide-menu__item">Китайский чай</li>
+									<li class="slide-menu__item">Крафтовые взвары</li>
+								</ul>
+								<a href="" class="slide-menu__link">
+									<picture><source srcset="img/enter.webp" type="image/webp"><img src="img/enter.png" alt=""></picture>
+									<span>Смотреть меню</span>
+								</a>
+								<div class="slide-menu__arrow">
+									<picture><source srcset="img/arrow.webp" type="image/webp"><img src="img/arrow.png" alt="стрелка"></picture>
+								</div>
+							</div>
+							<div class="slide-menu__image-2">
+								<picture><source srcset="img/slide-menu2.webp" type="image/webp"><img src="img/slide-menu2.png" alt=""></picture>
+							</div>
+							<div class="slide-menu__image-3">
+								<picture><source srcset="img/slide-menu3.webp" type="image/webp"><img src="img/slide-menu3.png" alt=""></picture>
+							</div>
+							<div class="slide-menu__image-4">
+								<picture><source srcset="img/slide-menu4.webp" type="image/webp"><img src="img/slide-menu4.png" alt=""></picture>
+							</div>
+							
+							<div class="slide-menu__image-5">
+								<picture><source srcset="img/slide-menu6.webp" type="image/webp"><img src="img/slide-menu6.png" alt=""></picture>
+							</div>
+							<div class="slide-menu__image-1">
+								<picture><source srcset="img/slide-menu1.webp" type="image/webp"><img src="img/slide-menu1.png" alt=""></picture>
+							</div>
+						</div>
+						<div class="main__slide swiper-slide slide-main">
+							<div class="slide-main__logo">
+								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="логотип teploplace"></picture>
+							</div>
+							<div class="slide-main__bg">
+								<div class="slide-main__sub-title">
+									<picture><source srcset="img/teploplace-last.webp" type="image/webp"><img src="img/teploplace-last.png" alt=""></picture>
+								</div>
+								<div class="slide-main__block-text">Mixteria Lounge</div>
+								<div class="slide-main__time">Работаем C 14:00 ДО 00:00 <span>(пт-сб до 02:00)</span>
+								</div>
+								<div class="slide-main__address">
+									<picture><source srcset="img/main1.webp" type="image/webp"><img src="img/main1.png" alt=""></picture>
+									<span>ул. Октябрьская, 36</span>
+								</div>
+								<div class="slide-main__passage">
+									<picture><source srcset="img/main2.webp" type="image/webp"><img src="img/main2.png" alt=""></picture>
+									<span>м. Марьина Роща</span>
+								</div>
+							</div>
+							<div class="slide-main__new">
+								<div class="slide-main__text-head">
+									ВВЕДИ В ТЕЛЕГРАМ-БОТ И ПОЛУЧИ СКИДКУ 50% НА ПЕРВЫЙ КАЛЬЯН
+								</div>
+								<div class="slide-main__copy-block">
+									<div class="slide-main__copy-inner" id="copy-button">
+										<p id="text-to-copy">Skittles</p>
+										<img src="img/copy.svg" alt="">
+									</div>
+									<div class="slide-main__copy-text">Скопировано</div>
+								</div>
+								<div class="slide-main__links">
+									<a href="" class="slide-main__telegram slide-main__telegram_padding">
+										<span>Перейти в TG бот</span>
+										<picture><source srcset="img/telegram.webp" type="image/webp"><img src="img/telegram.png" alt=""></picture>
+									</a>
+									<a href="" class="slide-main__phone">
+										<picture><source srcset="img/phone.webp" type="image/webp"><img src="img/phone.png" alt=""></picture>
+									</a>
+								</div>
+							</div>
+							
+							
 						</div>
 					</div>
 					<button type="button" class="swiper-button-prev main__button-prev"></button>
@@ -491,8 +677,8 @@
 	</div>
 
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20231004205455"></script>
-	<script src="js/app.js?_v=20231004205455"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20231008203215"></script>
+	<script src="js/app.js?_v=20231008203215"></script>
 </body>
 
 </html>
