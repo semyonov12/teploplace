@@ -59,13 +59,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-
+	let mySwip
 	if (document.querySelector('.main__slider')) {
 		const progressContent = document.querySelectorAll(".boxes-autoplay-progress span");
 		const slideVideo1 = document.querySelector('.slide-video');
 		const slideVideo2 = document.querySelector('.slide-video-2');
 		// Создаем слайдер
-		let mySwip = new Swiper('.main__slider', {
+		 mySwip = new Swiper('.main__slider', {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -104,9 +104,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},
+				2000: {
+					slidesPerView: 3.6,
+					spaceBetween: 20,
+				},
 			},
 			on: {
 				autoplayTimeLeft(s, time, progress) {
+
 					let slideAct = this.activeIndex;
 					progressContent[slideAct].style.setProperty("--progress", 1 - progress);
 					if (slideAct === 0) {
@@ -118,13 +123,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 				},
 
-				slideChange: function () {
 
+				slideChange: function () {
 					if (this.activeIndex === 1 || this.activeIndex === 4 || this.activeIndex === 8) {
 						document.querySelector('.main__row-line').classList.add('main__row-line-black');
 					  } else {
 						document.querySelector('.main__row-line').classList.remove('main__row-line-black');
 					  }
+					
 					
 					if (this.activeIndex === 3) {
 					  this.params.autoplay.delay = 14600;
@@ -137,51 +143,57 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					  this.params.autoplay.delay = 3000; 
 					  this.autoplay.start();
 					}
+					
+
 				  },
 
 
 				slideNextTransitionStart: function () {
 					
-					// if (slideVideo1.classList.contains("swiper-slide-active")) {
-					// 	slideVideo1.querySelector('video').play();
-					// }
-					// else if (slideVideo2.classList.contains("swiper-slide-active")) {
-					// 	slideVideo2.querySelector('video').play();
-					// }
-					// else {
-					// 	slideVideo1.querySelector('video').pause();
-					// 	slideVideo1.querySelector('video').currentTime = 0;
+					if (slideVideo1.classList.contains("swiper-slide-active")) {
+						slideVideo1.querySelector('video').play();
+					}
+					else if (slideVideo2.classList.contains("swiper-slide-active")) {
+						slideVideo2.querySelector('video').play();
+					}
+					else {
+						slideVideo1.querySelector('video').pause();
+						slideVideo1.querySelector('video').currentTime = 0;
 
-					// 	slideVideo2.querySelector('video').pause();
-					// 	slideVideo2.querySelector('video').currentTime = 0;
-					// }
+						slideVideo2.querySelector('video').pause();
+						slideVideo2.querySelector('video').currentTime = 0;
+					}
 
 					let slideAct = this.activeIndex - 1;
 					progressContent[slideAct].style.width = '100%';
 				},
 
 				slidePrevTransitionStart: function () {
-					// if (slideVideo1.classList.contains("swiper-slide-active")) {
-					// 	slideVideo1.querySelector('video').play();
-					// }
-					// else if (slideVideo2.classList.contains("swiper-slide-active")) {
-					// 	slideVideo2.querySelector('video').play();
-					// }
-					// else {
-					// 	slideVideo1.querySelector('video').pause();
-					// 	slideVideo1.querySelector('video').currentTime = 0;
+					if (slideVideo1.classList.contains("swiper-slide-active")) {
+						slideVideo1.querySelector('video').play();
+					}
+					else if (slideVideo2.classList.contains("swiper-slide-active")) {
+						slideVideo2.querySelector('video').play();
+					}
+					else {
+						slideVideo1.querySelector('video').pause();
+						slideVideo1.querySelector('video').currentTime = 0;
 
-					// 	slideVideo2.querySelector('video').pause();
-					// 	slideVideo2.querySelector('video').currentTime = 0;
-					// }
+						slideVideo2.querySelector('video').pause();
+						slideVideo2.querySelector('video').currentTime = 0;
+					}
 
 					let slideAct = this.activeIndex + 1;
 					progressContent[slideAct].style.width = '0%';
 				},
 
+
 			}
+			
 
 		});
+		
+			
 
 
 	}
