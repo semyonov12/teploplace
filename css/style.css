@@ -2627,13 +2627,13 @@ main {
 
   .slide-main__copy-block {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
   }
 
   .slide-main__copy-inner {
     font-size: 16px;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   .slide-main__copy-inner img {

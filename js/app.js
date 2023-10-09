@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					spaceBetween: 20,
 				},
 
-				1442: {
+				1441: {
 					slidesPerView: 2.5,
 					spaceBetween: 20,
 				},
@@ -119,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				},
 
 				slideChange: function () {
+					
 					if (this.activeIndex === 3) {
 					  this.params.autoplay.delay = 14600;
 					  this.autoplay.start(); //
@@ -135,22 +136,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 				slideNextTransitionStart: function () {
 					
-
-					if (slideVideo2.classList.contains("swiper-slide-active")) {
-						slideVideo2.querySelector('video').play();
-						console.log(slideVideo2.querySelector('video').duration * 1000);
-					}
-					else {
-						slideVideo2.querySelector('video').pause();
-						slideVideo2.querySelector('video').currentTime = 0;
-					}
-
 					if (slideVideo1.classList.contains("swiper-slide-active")) {
 						slideVideo1.querySelector('video').play();
+					}
+					else if (slideVideo2.classList.contains("swiper-slide-active")) {
+						slideVideo2.querySelector('video').play();
 					}
 					else {
 						slideVideo1.querySelector('video').pause();
 						slideVideo1.querySelector('video').currentTime = 0;
+
+						slideVideo2.querySelector('video').pause();
+						slideVideo2.querySelector('video').currentTime = 0;
 					}
 
 					let slideAct = this.activeIndex - 1;
@@ -158,21 +155,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				},
 
 				slidePrevTransitionStart: function () {
-
-					if (slideVideo2.classList.contains("swiper-slide-active")) {
-						slideVideo2.querySelector('video').play();
-					}
-					else {
-						slideVideo2.querySelector('video').pause();
-						slideVideo2.querySelector('video').currentTime = 0;
-					}
-
 					if (slideVideo1.classList.contains("swiper-slide-active")) {
 						slideVideo1.querySelector('video').play();
+					}
+					else if (slideVideo2.classList.contains("swiper-slide-active")) {
+						slideVideo2.querySelector('video').play();
 					}
 					else {
 						slideVideo1.querySelector('video').pause();
 						slideVideo1.querySelector('video').currentTime = 0;
+
+						slideVideo2.querySelector('video').pause();
+						slideVideo2.querySelector('video').currentTime = 0;
 					}
 
 					let slideAct = this.activeIndex + 1;
