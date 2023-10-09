@@ -119,6 +119,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				},
 
 				slideChange: function () {
+
+					if (this.activeIndex === 1 || this.activeIndex === 4 || this.activeIndex === 8) {
+						document.querySelector('.main__row-line').classList.add('main__row-line-black');
+					  } else {
+						document.querySelector('.main__row-line').classList.remove('main__row-line-black');
+					  }
 					
 					if (this.activeIndex === 3) {
 					  this.params.autoplay.delay = 14600;
