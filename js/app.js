@@ -136,38 +136,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 				slideNextTransitionStart: function () {
 					
-					if (slideVideo1.classList.contains("swiper-slide-active")) {
-						slideVideo1.querySelector('video').play();
-					}
-					else if (slideVideo2.classList.contains("swiper-slide-active")) {
-						slideVideo2.querySelector('video').play();
-					}
-					else {
-						slideVideo1.querySelector('video').pause();
-						slideVideo1.querySelector('video').currentTime = 0;
+					// if (slideVideo1.classList.contains("swiper-slide-active")) {
+					// 	slideVideo1.querySelector('video').play();
+					// }
+					// else if (slideVideo2.classList.contains("swiper-slide-active")) {
+					// 	slideVideo2.querySelector('video').play();
+					// }
+					// else {
+					// 	slideVideo1.querySelector('video').pause();
+					// 	slideVideo1.querySelector('video').currentTime = 0;
 
-						slideVideo2.querySelector('video').pause();
-						slideVideo2.querySelector('video').currentTime = 0;
-					}
+					// 	slideVideo2.querySelector('video').pause();
+					// 	slideVideo2.querySelector('video').currentTime = 0;
+					// }
 
 					let slideAct = this.activeIndex - 1;
 					progressContent[slideAct].style.width = '100%';
 				},
 
 				slidePrevTransitionStart: function () {
-					if (slideVideo1.classList.contains("swiper-slide-active")) {
-						slideVideo1.querySelector('video').play();
-					}
-					else if (slideVideo2.classList.contains("swiper-slide-active")) {
-						slideVideo2.querySelector('video').play();
-					}
-					else {
-						slideVideo1.querySelector('video').pause();
-						slideVideo1.querySelector('video').currentTime = 0;
+					// if (slideVideo1.classList.contains("swiper-slide-active")) {
+					// 	slideVideo1.querySelector('video').play();
+					// }
+					// else if (slideVideo2.classList.contains("swiper-slide-active")) {
+					// 	slideVideo2.querySelector('video').play();
+					// }
+					// else {
+					// 	slideVideo1.querySelector('video').pause();
+					// 	slideVideo1.querySelector('video').currentTime = 0;
 
-						slideVideo2.querySelector('video').pause();
-						slideVideo2.querySelector('video').currentTime = 0;
-					}
+					// 	slideVideo2.querySelector('video').pause();
+					// 	slideVideo2.querySelector('video').currentTime = 0;
+					// }
 
 					let slideAct = this.activeIndex + 1;
 					progressContent[slideAct].style.width = '0%';
