@@ -76,17 +76,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				delay: 3000, // общее время автопрокрутки для всех слайдов
 				disableOnInteraction: false, // автопрокрутка не останавливается при взаимодействии пользователя
 				waitForTransition: true, // автопрокрутка ждет окончания перехода между слайдами
-				speed: 1000, // скорость перехода между слайдами
-				// функция, которая возвращает время автопрокрутки для каждого слайда
-				// slideIndex - индекс текущего слайда (начинается с 0)
-				// slide - элемент текущего слайда (HTMLElement)
-				calculateDelay: function (slideIndex, slide) {
-					if (slideIndex === 2 || slideIndex === 4) {
-						return 15000; // время автопрокрутки для 3 и 5 слайда - 15 секунд
-					} else {
-						return 2000; // время автопрокрутки для остальных слайдов - 2 секунды
-					}
-				}
 			},
 			autoplayDisableOnInteraction: true,
 			navigation: {
