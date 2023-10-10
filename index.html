@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20231009084245">
-	<link rel="stylesheet" href="css/style.min.css?_v=20231009084245">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20231010142917">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231010142917">
 	<title>Главная</title>
 	
 </head>
@@ -539,8 +539,8 @@
 							<div class="slide-skittles__block">
 								<div class="slide-skittles__sub-title">Наташ, бронируй стол, у нас</div>
 								<div class="slide-skittles__title">
-									<img src="img/SKITTLES2.0.png" alt="SKITTLES">
-									<img class="slide-skittles__flash" src="img/flash.png" alt="">
+									<picture><source srcset="img/SKITTLES2.0.webp" type="image/webp"><img src="img/SKITTLES2.0.png" alt="SKITTLES"></picture>
+									<picture><source srcset="img/flash.webp" type="image/webp"><img class="slide-skittles__flash" src="img/flash.png" alt=""></picture>
 								</div>
 								<div class="slide-skittles__text">
 									<p>Новая версия нашего</p>
@@ -618,15 +618,15 @@
 								<picture><source srcset="img/slide-menu6.webp" type="image/webp"><img src="img/slide-menu6.png" alt=""></picture>
 							</div>
 							<div class="slide-menu__image-1">
-								<img src="img/slide-menu1.png" alt="">
+								<picture><source srcset="img/slide-menu1.webp" type="image/webp"><img src="img/slide-menu1.png" alt=""></picture>
 							</div>
 						</div>
-						<div class="main__slide swiper-slide slide-main">
+						<div class="main__slide swiper-slide slide-main slide-last">
 							<div class="slide-main__logo">
 								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="логотип teploplace"></picture>
 							</div>
 							<div class="slide-main__bg">
-								<div class="slide-main__sub-title">
+								<div class="slide-main__sub-title slide-main__sub-title_big">
 									<picture><source srcset="img/teploplace-last.webp" type="image/webp"><img src="img/teploplace-last.png" alt=""></picture>
 								</div>
 								<div class="slide-main__block-text">Mixteria Lounge</div>
@@ -665,17 +665,18 @@
 							
 							
 						</div>
+						
 					</div>
 					<button type="button" class="swiper-button-prev main__button-prev"></button>
 					<button type="button" class="swiper-button-next main__button-next"></button>
+					<button class="main__button-replay"></button>
 				</div>
 			</div>
-
 	</div>
 
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20231009084245"></script>
-	<script src="js/app.js?_v=20231009084245"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20231010142917"></script>
+	<script src="js/app.js?_v=20231010142917"></script>
 </body>
 
 </html>
