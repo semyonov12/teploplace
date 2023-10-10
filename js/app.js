@@ -57,15 +57,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	}
 
 
+	let mySwip;
 
-
-	let mySwip
 	if (document.querySelector('.main__slider')) {
+		var isEndReached = false;
+		var isAutoplayStopped = false;
+
 		const progressContent = document.querySelectorAll(".boxes-autoplay-progress span");
 		const slideVideo1 = document.querySelector('.slide-video');
 		const slideVideo2 = document.querySelector('.slide-video-2');
 		// Создаем слайдер
-		 mySwip = new Swiper('.main__slider', {
+		mySwip = new Swiper('.main__slider', {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -108,8 +110,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					slidesPerView: 3.6,
 					spaceBetween: 20,
 				},
+				2400: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
 			},
 			on: {
+
 				autoplayTimeLeft(s, time, progress) {
 
 					let slideAct = this.activeIndex;
@@ -121,35 +128,49 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					}
 					progressContent[slideAct].style.width = 'calc(100% * var(--progress))';
 
+
+				},
+
+				slideChange: function () {
+
+					if (this.activeIndex === 1 || this.activeIndex === 4 || this.activeIndex === 8) {
+						document.querySelector('.main__row-line').classList.add('main__row-line-black');
+					} else {
+						document.querySelector('.main__row-line').classList.remove('main__row-line-black');
+					}
+
+
+
+
+
+					if (this.activeIndex === 3) {
+						this.params.autoplay.delay = 14600;
+						//this.autoplay.stop(); //
+					} else if (this.activeIndex === 6) {
+						this.params.autoplay.delay = 11500;
+						this.autoplay.start();
+					} else if (this.activeIndex === this.slides.length - 1) {
+						this.autoplay.stop();
+						if(document.querySelector('.main__button-replay')) {
+							document.querySelector('.main__button-replay').classList.add('main__button-replay-act');
+						}
+						
+					}
+					else {
+						this.params.autoplay.delay = 3000;
+						this.autoplay.start();
+						if(document.querySelector('.main__button-replay')) {
+							document.querySelector('.main__button-replay').classList.remove('main__button-replay-act');
+						}
+						
+					}
+
+
 				},
 
 
-				slideChange: function () {
-					if (this.activeIndex === 1 || this.activeIndex === 4 || this.activeIndex === 8) {
-						document.querySelector('.main__row-line').classList.add('main__row-line-black');
-					  } else {
-						document.querySelector('.main__row-line').classList.remove('main__row-line-black');
-					  }
-					
-					
-					if (this.activeIndex === 3) {
-					  this.params.autoplay.delay = 14600;
-					  this.autoplay.start(); //
-					} else if(this.activeIndex === 6) {
-						this.params.autoplay.delay = 11500; 
-						this.autoplay.start(); 
-					}
-					else {
-					  this.params.autoplay.delay = 3000; 
-					  this.autoplay.start();
-					}
-					
-
-				  },
-
-
 				slideNextTransitionStart: function () {
-					
+
 					if (slideVideo1.classList.contains("swiper-slide-active")) {
 						slideVideo1.querySelector('video').play();
 					}
@@ -189,11 +210,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 			}
+
 			
 
+
 		});
-		
+
+		const btnReplay = document.querySelector('.main__button-replay');
+
+		if(btnReplay) {
+			btnReplay.addEventListener("click", function (e) {
+				mySwip.slideTo(0);
+			});
+		}
 			
+
+
 
 
 	}
