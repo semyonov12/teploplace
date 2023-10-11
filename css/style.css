@@ -1067,7 +1067,7 @@ body {
   margin-bottom: 10px;
 }
 
-.slide-reviews__top svg {
+.slide-reviews__top > svg {
   width: 80px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 80px;
@@ -2229,7 +2229,7 @@ body {
     padding: 20px 20px 20px;
   }
 
-  .slide-reviews__top svg {
+  .slide-reviews__top > svg {
     width: 60px;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 60px;
