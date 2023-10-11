@@ -2529,6 +2529,7 @@ body {
             flex: 0 0 12px;
     width: 12px;
     height: 12px;
+    margin-right: 3px;
   }
 
   .bottom-reviews__text {
