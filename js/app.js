@@ -60,9 +60,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	let mySwip;
 
 	if (document.querySelector('.main__slider')) {
-		var isEndReached = false;
-		var isAutoplayStopped = false;
-
 		const progressContent = document.querySelectorAll(".boxes-autoplay-progress span");
 		const slideVideo1 = document.querySelector('.slide-video');
 		const slideVideo2 = document.querySelector('.slide-video-2');
@@ -89,30 +86,39 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					slidesPerView: 1,
 					spaceBetween: 0,
 				},
+				
 				768: {
-					slidesPerView: 1.5,
-					spaceBetween: 10,
+					slidesPerView: 1.7,
+					spaceBetween: 0,
 				},
-				1201: {
+				991: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 0,
+				},
+				1240: {
+					slidesPerView: 2.5,
+					spaceBetween: 0,
 				},
 
 				1441: {
-					slidesPerView: 2.5,
-					spaceBetween: 20,
+					slidesPerView: 2.6,
+					spaceBetween: 0,
 				},
-				1701: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+				1750: {
+					slidesPerView: 3.4,
+					spaceBetween: 0,
 				},
-				2000: {
-					slidesPerView: 3.6,
-					spaceBetween: 20,
-				},
-				2400: {
+				2200: {
 					slidesPerView: 4,
-					spaceBetween: 20,
+					spaceBetween: 0,
+				},
+				2500: {
+					slidesPerView: 4.5,
+					spaceBetween: 0,
+				},
+				2900: {
+					slidesPerView: 5,
+					spaceBetween: 10,
 				},
 			},
 			on: {
@@ -140,29 +146,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					}
 
 
-
-
-
 					if (this.activeIndex === 3) {
 						this.params.autoplay.delay = 14600;
-						//this.autoplay.stop(); //
+						this.autoplay.start();
 					} else if (this.activeIndex === 6) {
 						this.params.autoplay.delay = 11500;
 						this.autoplay.start();
 					} else if (this.activeIndex === this.slides.length - 1) {
+
 						this.autoplay.stop();
 						if(document.querySelector('.main__button-replay')) {
 							document.querySelector('.main__button-replay').classList.add('main__button-replay-act');
 						}
-						
+
 					}
 					else {
 						this.params.autoplay.delay = 3000;
 						this.autoplay.start();
-						if(document.querySelector('.main__button-replay')) {
+						if (document.querySelector('.main__button-replay')) {
 							document.querySelector('.main__button-replay').classList.remove('main__button-replay-act');
 						}
-						
+
 					}
 
 
@@ -211,19 +215,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 			}
 
-			
+
 
 
 		});
 
 		const btnReplay = document.querySelector('.main__button-replay');
 
-		if(btnReplay) {
+		if (btnReplay) {
 			btnReplay.addEventListener("click", function (e) {
 				mySwip.slideTo(0);
 			});
 		}
-			
+
 
 
 

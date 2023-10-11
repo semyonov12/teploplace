@@ -418,7 +418,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -489,7 +489,7 @@ body {
   color: #E3E3E3;
   text-align: center;
   font-family: Proxima;
-  font-size: 25px;
+  font-size: 23px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -514,7 +514,7 @@ body {
           align-items: center;
   color: #000;
   font-family: Proxima;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
@@ -538,7 +538,7 @@ body {
           justify-content: center;
   color: #FFF;
   font-family: Proxima;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
@@ -554,11 +554,11 @@ body {
   color: #FFF;
   text-align: center;
   font-family: Proxima;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
-  max-width: 400px;
+  max-width: 380px;
   margin: 0px auto 20px;
 }
 
@@ -650,7 +650,7 @@ body {
   padding: 10px 15px 10px 30px;
   color: #FFF;
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
   margin-right: 22px;
@@ -661,7 +661,7 @@ body {
 
 .slide-main__telegram_padding {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 400;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
@@ -724,8 +724,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 20px;
+  padding: 20px 20px;
   text-align: center;
+  overflow: hidden;
 }
 
 .slide-mix__logo {
@@ -789,11 +790,11 @@ body {
   color: #000;
   text-align: center;
   font-family: FoglihtenNo06;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 100%;
   letter-spacing: 5.25px;
-  max-width: 530px;
+  max-width: 500px;
   text-align: center;
   margin: 0px auto 50px;
 }
@@ -885,7 +886,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 20px;
+  padding: 20px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -955,7 +956,7 @@ body {
 .slide-ready__track p {
   color: #FFF;
   font-family: Konstruktor;
-  font-size: 30px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -978,7 +979,7 @@ body {
   margin-left: 20px;
   background-color: #fff;
   border-radius: 50%;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 }
 
 .slide-ready__text {
@@ -988,7 +989,7 @@ body {
 
 .slide-ready__text p:nth-child(1) {
   color: #FFF;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 300;
   line-height: 100%;
   margin-bottom: 30px;
@@ -997,7 +998,7 @@ body {
 
 .slide-ready__text p:nth-child(2) {
   color: #FFF;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 100%;
   margin-bottom: 30px;
@@ -1006,7 +1007,7 @@ body {
 
 .slide-ready__text p:nth-child(3) {
   color: #FFF;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 100%;
   max-width: 70%;
@@ -1045,7 +1046,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 40px 20px 20px;
+  padding: 20px 20px 20px;
   background: #FFF;
   position: relative;
 }
@@ -1089,7 +1090,7 @@ body {
 .slide-reviews__value {
   color: #4D4D4D;
   font-family: yandex;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 500;
   line-height: 112.8%;
   margin-right: 20px;
@@ -1117,7 +1118,7 @@ body {
 .slide-reviews__evaluation {
   color: #4D4D4D;
   font-family: yandex;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 112.8%;
 }
@@ -1134,7 +1135,7 @@ body {
 .slide-reviews__top-text {
   color: #4D4D4D;
   font-family: yandex;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 112.8%;
@@ -1144,7 +1145,7 @@ body {
 .slide-reviews__bottom-text {
   color: #4D4D4D;
   font-family: yandex;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 112.8%;
   max-width: 200px;
@@ -1234,7 +1235,7 @@ body {
           justify-content: center;
   max-width: 93%;
   width: 100%;
-  padding: 15px 20px;
+  padding: 8px 20px;
   margin: 0px auto;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -1293,7 +1294,7 @@ body {
 .bottom-reviews__name {
   color: #000;
   font-family: yandex;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 112.8%;
 }
@@ -1301,7 +1302,7 @@ body {
 .bottom-reviews__label {
   color: #878787;
   font-family: yandex;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 112.8%;
 }
@@ -1317,17 +1318,17 @@ body {
 
 .bottom-reviews__rating svg {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 20px;
-          flex: 0 0 20px;
-  width: 20px;
-  height: 20px;
+      -ms-flex: 0 0 18px;
+          flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
   margin-right: 5px;
 }
 
 .bottom-reviews__text {
   color: #878787;
   font-family: yandex;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 110%;
 }
@@ -1350,7 +1351,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 20px;
+  padding: 20px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -1534,7 +1535,7 @@ body {
   color: #FFF;
   font-size: 24px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 104.7%;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -1581,7 +1582,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 20px;
+  padding: 20px 20px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -1826,7 +1827,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 20px;
+  padding: 20px 20px;
   padding-bottom: 15vh;
   position: relative;
   overflow: hidden;
@@ -2198,12 +2199,12 @@ body {
   }
 
   .slide-ready__track p {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .slide-ready__track p::after {
     content: "";
-    margin-bottom: 12px;
+    margin-bottom: 11px;
   }
 
   .slide-ready__text {
@@ -2223,7 +2224,16 @@ body {
   }
 
   .slide-reviews {
-    padding: 30px 20px 20px;
+    padding: 20px 20px 20px;
+  }
+
+  .slide-reviews__top svg {
+    width: 60px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60px;
+            flex: 0 0 60px;
+    height: 60px;
+    margin-right: 5px;
   }
 
   .slide-reviews__value {
@@ -2239,7 +2249,7 @@ body {
   }
 
   .slide-reviews__bottom-text {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .slide-reviews__body {
@@ -2251,7 +2261,7 @@ body {
   }
 
   .slide-reviews__link {
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-size: 26px;
   }
 
@@ -2264,15 +2274,15 @@ body {
   }
 
   .bottom-reviews__name {
-    font-size: 18px;
-  }
-
-  .bottom-reviews__label {
     font-size: 16px;
   }
 
+  .bottom-reviews__label {
+    font-size: 14px;
+  }
+
   .bottom-reviews__text {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .slide-sale__title {
@@ -2743,12 +2753,12 @@ body {
   }
 
   .slide-mix__title {
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 
   .slide-mix__title span {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .slide-mix__sub-title {
@@ -2761,8 +2771,9 @@ body {
 
   .slide-mix__text {
     font-size: 16px;
-    max-width: 360px;
+    max-width: 305px;
     line-height: 120%;
+    letter-spacing: 3px;
   }
 
   .slide-mix__text span::after {
@@ -2832,6 +2843,10 @@ body {
 
   .slide-ready__decor {
     max-width: 250px;
+  }
+
+  .slide-reviews {
+    padding: 20px 20px 20px;
   }
 
   .slide-reviews__top {
@@ -3033,7 +3048,7 @@ body {
 
 @media (max-width: 479.98px) {
   .slide-reviews {
-    padding: 30px 20px 10px;
+    padding: 20px 20px 10px;
   }
 
   .slide-reviews__top {
