@@ -2563,13 +2563,6 @@ body {
   }
 }
 
-@media (max-width: 1590px) {
-  .slide-reviews__item {
-    padding: 10px;
-    font-size: 16px;
-  }
-}
-
 @media (max-width: 1200px) {
   .main__row-line {
     width: 40%;
