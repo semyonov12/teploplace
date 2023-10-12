@@ -2161,6 +2161,10 @@ body {
     font-size: 18px;
   }
 
+  .slide-main__new {
+    max-width: 340px;
+  }
+
   .slide-main__telegram {
     font-size: 18px;
   }
