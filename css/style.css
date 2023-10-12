@@ -2125,7 +2125,7 @@ body {
   }
 
   .slide-main__time {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 20px;
   }
 
@@ -2367,7 +2367,7 @@ body {
   }
 
   .slide-reviews__item {
-    font-size: 15px;
+    font-size: 14px;
     padding: 5px 10px;
     border-radius: 5px;
   }
@@ -2387,24 +2387,16 @@ body {
   }
 
   .bottom-reviews__image {
-    max-width: 45px;
+    max-width: 42px;
     margin-right: 10px;
   }
 
   .bottom-reviews__name {
-    font-size: 16px;
-  }
-
-  .bottom-reviews__name {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .bottom-reviews__label {
-    font-size: 14px;
-  }
-
-  .bottom-reviews__label {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .bottom-reviews__rating svg {
@@ -2425,16 +2417,16 @@ body {
   }
 
   .slide-sale__title {
-    font-size: 40px;
-    max-width: 270px;
+    font-size: 38px;
+    max-width: 250px;
   }
 
   .slide-sale__wrap {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .slide-sale__sub-title {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .slide-sale__label {
