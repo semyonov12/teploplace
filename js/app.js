@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		mySwip = new Swiper('.main__slider', {
 			observer: true,
 			observeParents: true,
-			slidesPerView: 3,
-			spaceBetween: 20,
+			slidesPerView: 1,
+			spaceBetween: 0,
 			loop: false,
 			centeredSlides: true,
 			autoplay: {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					slidesPerView: 1,
 					spaceBetween: 0,
 				},
-				
+
 				768: {
 					slidesPerView: 1.7,
 					spaceBetween: 0,
@@ -96,12 +96,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					spaceBetween: 0,
 				},
 				1240: {
-					slidesPerView: 2.5,
+					slidesPerView: 2.8,
 					spaceBetween: 0,
 				},
 
-				1441: {
-					slidesPerView: 2.6,
+				1500: {
+					slidesPerView: 3,
 					spaceBetween: 0,
 				},
 				1750: {
@@ -155,10 +155,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					} else if (this.activeIndex === this.slides.length - 1) {
 
 						this.autoplay.stop();
-						if(document.querySelector('.main__button-replay')) {
+						if (document.querySelector('.main__button-replay')) {
 							document.querySelector('.main__button-replay').classList.add('main__button-replay-act');
 						}
-
 					}
 					else {
 						this.params.autoplay.delay = 3000;
@@ -175,38 +174,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 				slideNextTransitionStart: function () {
 
-					if (slideVideo1.classList.contains("swiper-slide-active")) {
-						slideVideo1.querySelector('video').play();
-					}
-					else if (slideVideo2.classList.contains("swiper-slide-active")) {
-						slideVideo2.querySelector('video').play();
-					}
-					else {
-						slideVideo1.querySelector('video').pause();
-						slideVideo1.querySelector('video').currentTime = 0;
+					// if (slideVideo1.classList.contains("swiper-slide-active")) {
+					// 	slideVideo1.querySelector('video').play();
+					// }
+					// else if (slideVideo2.classList.contains("swiper-slide-active")) {
+					// 	slideVideo2.querySelector('video').play();
+					// }
+					// else {
+					// 	slideVideo1.querySelector('video').pause();
+					// 	slideVideo1.querySelector('video').currentTime = 0;
 
-						slideVideo2.querySelector('video').pause();
-						slideVideo2.querySelector('video').currentTime = 0;
-					}
+					// 	slideVideo2.querySelector('video').pause();
+					// 	slideVideo2.querySelector('video').currentTime = 0;
+					// }
 
 					let slideAct = this.activeIndex - 1;
 					progressContent[slideAct].style.width = '100%';
 				},
 
 				slidePrevTransitionStart: function () {
-					if (slideVideo1.classList.contains("swiper-slide-active")) {
-						slideVideo1.querySelector('video').play();
-					}
-					else if (slideVideo2.classList.contains("swiper-slide-active")) {
-						slideVideo2.querySelector('video').play();
-					}
-					else {
-						slideVideo1.querySelector('video').pause();
-						slideVideo1.querySelector('video').currentTime = 0;
+					// if (slideVideo1.classList.contains("swiper-slide-active")) {
+					// 	slideVideo1.querySelector('video').play();
+					// }
+					// else if (slideVideo2.classList.contains("swiper-slide-active")) {
+					// 	slideVideo2.querySelector('video').play();
+					// }
+					// else {
+					// 	slideVideo1.querySelector('video').pause();
+					// 	slideVideo1.querySelector('video').currentTime = 0;
 
-						slideVideo2.querySelector('video').pause();
-						slideVideo2.querySelector('video').currentTime = 0;
-					}
+					// 	slideVideo2.querySelector('video').pause();
+					// 	slideVideo2.querySelector('video').currentTime = 0;
+					// }
 
 					let slideAct = this.activeIndex + 1;
 					progressContent[slideAct].style.width = '0%';

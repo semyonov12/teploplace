@@ -2047,8 +2047,6 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .slide-video-2 {
@@ -2062,8 +2060,6 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 @-webkit-keyframes marquee {
@@ -2494,27 +2490,39 @@ body {
   }
 
   .slide-skittles__sub-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .slide-skittles__title {
-    max-width: 380px;
+    max-width: 350px;
   }
 
   .slide-skittles__text {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .slide-skittles__item {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .slide-skittles__image-1 {
-    max-width: 300px;
+    max-width: 220px;
   }
 
   .slide-skittles__image-2 {
-    max-width: 150px;
+    max-width: 120px;
+  }
+
+  .slide-skittles__image-3 {
+    max-width: 250px;
+  }
+
+  .slide-skittles__decor-3 {
+    max-width: 20px;
+  }
+
+  .slide-skittles__decor-4 {
+    max-width: 30px;
   }
 
   .slide-menu {
