@@ -87,38 +87,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					spaceBetween: 0,
 				},
 
-				768: {
-					slidesPerView: 1.7,
+				550: {
+					slidesPerView: 'auto',
 					spaceBetween: 0,
-				},
-				991: {
-					slidesPerView: 2,
-					spaceBetween: 0,
-				},
-				1240: {
-					slidesPerView: 2.8,
-					spaceBetween: 0,
-				},
-
-				1500: {
-					slidesPerView: 3,
-					spaceBetween: 0,
-				},
-				1750: {
-					slidesPerView: 3.4,
-					spaceBetween: 0,
-				},
-				2200: {
-					slidesPerView: 4,
-					spaceBetween: 0,
-				},
-				2500: {
-					slidesPerView: 4.5,
-					spaceBetween: 0,
-				},
-				2900: {
-					slidesPerView: 5,
-					spaceBetween: 10,
 				},
 			},
 			on: {
