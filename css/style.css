@@ -2800,7 +2800,7 @@ body {
   }
 
   .slide-reviews__top {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .slide-reviews__value {
@@ -2816,7 +2816,7 @@ body {
   }
 
   .slide-reviews__body {
-    margin: 0 -10px 30px;
+    margin: 0 -10px 20px;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
@@ -2845,6 +2845,7 @@ body {
   .slide-reviews__link {
     font-size: 18px;
     padding: 13px;
+    bottom: 10px;
   }
 
   .slide-reviews__link svg {
@@ -3031,7 +3032,7 @@ body {
   }
 
   .slide-reviews__top {
-    margin: 0 -20px 20px;
+    margin: 0 -20px 15px;
     padding: 10px 15px;
   }
 
@@ -3065,11 +3066,7 @@ body {
 
   .slide-reviews__link {
     max-width: 90%;
-    bottom: 20px;
-  }
-
-  .bottom-reviews__item:last-child {
-    display: none;
+    bottom: 10px;
   }
 
   .slide-sale__text {
